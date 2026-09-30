@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="mt-6 flex justify-center">
+    <div className="flex justify-center p-6">
       <div>
         FLOWFORGE Build workflows visually.
         <br />
