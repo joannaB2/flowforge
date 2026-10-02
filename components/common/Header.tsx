@@ -1,8 +1,6 @@
-'use client';
-
 import NextImage from 'next/image';
-import { ModeToggle } from './ModeToggle';
 import { SidebarTrigger } from '../ui/sidebar';
+import { Button } from '../ui/button';
 
 export const Header = () => {
   return (
@@ -17,7 +15,7 @@ export const Header = () => {
         />
         <span className="hidden font-bold md:inline">FlowForge</span>
       </div>
-      <ModeToggle />
+      <Button variant="outline">JB</Button>
     </header>
   );
 };
