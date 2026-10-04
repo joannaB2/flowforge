@@ -8,10 +8,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
+} from '@/common/ui/sidebar';
 import { Home, Form, Activity, LogOut } from 'lucide-react';
-import { ModeToggle } from './ModeToggle';
-import { Button } from '@/components/ui/button';
 import { usePathname } from 'next/navigation';
 
 export const LayoutSidebar = () => {
@@ -23,7 +21,7 @@ export const LayoutSidebar = () => {
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarMenu>
+          <SidebarMenu className="gap-3">
             <SidebarMenuItem>
               <SidebarMenuButton
                 isActive={isActive('/')}
@@ -55,12 +53,14 @@ export const LayoutSidebar = () => {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <div className="flex justify-between gap-2 p-4">
-          <ModeToggle />
-          <Button variant="outline">
-            <LogOut />
-          </Button>
-        </div>
+        <SidebarMenu className="gap-3">
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={() => console.log('logout')}>
+              <LogOut size={16} />
+              Logout
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
   );
