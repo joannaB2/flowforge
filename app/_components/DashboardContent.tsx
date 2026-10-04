@@ -1,8 +1,8 @@
 'use client';
 
-import { mockSubmissions } from '@/app/mocks/submissions';
-import { SubmissionStatusConstants } from '@/app/types/Submission';
-import { Card } from '@/components/ui/card';
+import { mockSubmissions } from '@/mocks/submissions';
+import { SubmissionStatusConstants } from '@/types/Submission';
+import { Card } from '@/common/ui/card';
 import { DashboardCharts } from './DahboardCharts';
 
 export const DashboardContent = () => {

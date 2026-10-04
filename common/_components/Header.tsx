@@ -1,6 +1,7 @@
 import NextImage from 'next/image';
 import { SidebarTrigger } from '../ui/sidebar';
 import { Button } from '../ui/button';
+import { ModeToggle } from './ModeToggle';
 
 export const Header = () => {
   return (
@@ -15,7 +16,10 @@ export const Header = () => {
         />
         <span className="hidden font-bold md:inline">FlowForge</span>
       </div>
-      <Button variant="outline">JB</Button>
+      <div className="flex gap-2">
+        <ModeToggle />
+        <Button variant="outline">JB</Button>
+      </div>
     </header>
   );
 };

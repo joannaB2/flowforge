@@ -6,8 +6,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from '@/components/ui/chart';
-import { Submission } from '@/app/types/Submission';
+} from '@/common/ui/chart';
+import { Submission } from '@/types/Submission';
 
 const chartConfig = {
   desktop: {

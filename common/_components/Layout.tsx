@@ -12,7 +12,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <LayoutSidebar />
             <div className="flex flex-1 flex-col">
               <Header />
-              <main className="flex-1 flex-col md:flex md:flex-row">
+              <main className="flex-1 flex-col p-4 md:flex md:flex-row md:px-12">
                 {children}
               </main>
               <Footer />
