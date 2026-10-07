@@ -1,4 +1,4 @@
-import { SidebarProvider } from '../ui/sidebar';
+import { SidebarProvider } from '../../components/ui/sidebar';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { LayoutSidebar } from './LayoutSidebar';

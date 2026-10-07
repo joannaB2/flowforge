@@ -8,7 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/common/ui/sidebar';
+} from '@/components/ui/sidebar';
 import { Home, Form, Activity, LogOut } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 

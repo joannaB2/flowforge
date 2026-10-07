@@ -2,7 +2,7 @@
 
 import { mockSubmissions } from '@/mocks/submissions';
 import { SubmissionStatusConstants } from '@/types/Submission';
-import { Card } from '@/common/ui/card';
+import { Card } from '@/components/ui/card';
 import { DashboardCharts } from './DahboardCharts';
 
 export const DashboardContent = () => {
