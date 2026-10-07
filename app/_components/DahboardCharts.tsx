@@ -6,7 +6,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from '@/common/ui/chart';
+} from '@/components/ui/chart';
 import { Submission } from '@/types/Submission';
 
 const chartConfig = {

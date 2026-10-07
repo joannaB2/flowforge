@@ -1,8 +1,8 @@
 'use client';
 
 import { ConfirmDialog } from '@/common/_components/ConfirmDialog';
-import { Button } from '@/common/ui/button';
-import { Card } from '@/common/ui/card';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { Form } from '@/types/Form';
 import { Eye } from 'lucide-react';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ export const FormList = ({ formList }: { formList: Form[] }) => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="ml-2 cursor-pointer"
+                className="ml-2"
                 title="View Form"
               >
                 <Eye className="inline-block h-4 w-4" />

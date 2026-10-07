@@ -1,10 +1,17 @@
-export type FieldType = 'text' | 'number' | 'scale' | 'select' | 'textarea';
+export type FieldType =
+  'text' | 'number' | 'scale' | 'select' | 'textarea' | 'boolean';
+
+export type FieldTypeSelectOption = {
+  label: string;
+  value: FieldType;
+};
 
 export type FormFieldBase = {
   id: string;
   name: string;
   label: string;
   required: boolean;
+  decription?: string;
 };
 
 export type FormFieldText = FormFieldBase & {
@@ -35,12 +42,18 @@ export type FormFieldTextarea = FormFieldBase & {
   placeholder?: string;
 };
 
+export type FormFieldBoolean = FormFieldBase & {
+  type: 'boolean';
+  checked: boolean;
+};
+
 export type FormField =
   | FormFieldText
   | FormFieldSelect
   | FormFieldNumber
   | FormFieldScale
-  | FormFieldTextarea;
+  | FormFieldTextarea
+  | FormFieldBoolean;
 
 export type FormStatus = 'draft' | 'published';
 

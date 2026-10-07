@@ -1,6 +1,6 @@
 import NextImage from 'next/image';
-import { SidebarTrigger } from '../ui/sidebar';
-import { Button } from '../ui/button';
+import { SidebarTrigger } from '../../components/ui/sidebar';
+import { Button } from '../../components/ui/button';
 import { ModeToggle } from './ModeToggle';
 
 export const Header = () => {
