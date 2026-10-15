@@ -7,7 +7,7 @@ export type FieldTypeSelectOption = {
 };
 
 export type FormFieldBase = {
-  id: string;
+  id: number | null;
   name: string;
   label: string;
   required: boolean;
@@ -26,8 +26,9 @@ export type FormFieldSelect = FormFieldBase & {
 
 export type FormFieldNumber = FormFieldBase & {
   type: 'number';
-  min: number;
-  max: number;
+  placeholder: string;
+  min?: number;
+  max?: number;
   unit?: string;
 };
 
@@ -39,7 +40,7 @@ export type FormFieldScale = FormFieldBase & {
 
 export type FormFieldTextarea = FormFieldBase & {
   type: 'textarea';
-  placeholder?: string;
+  placeholder: string;
 };
 
 export type FormFieldBoolean = FormFieldBase & {
