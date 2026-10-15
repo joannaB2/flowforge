@@ -1,0 +1,67 @@
+import * as z from 'zod';
+
+export const formSchema = z.discriminatedUnion('type', [
+  z.object({
+    type: z.literal('text'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    placeholder: z.string(),
+    id: z.number().nullable(),
+  }),
+  z.object({
+    type: z.literal('number'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    min: z.number('Min is required'),
+    max: z.number('Max is required'),
+    unit: z.string('Unit is required'),
+    placeholder: z.string(),
+    id: z.number().nullable(),
+  }),
+  z.object({
+    type: z.literal('select'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    options: z.array(
+      z.object({
+        value: z.string(),
+        label: z.string(),
+      }),
+    ),
+    id: z.number().nullable(),
+  }),
+  z.object({
+    type: z.literal('scale'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    min: z.number('Min is required'),
+    max: z.number('Max is required'),
+    id: z.number().nullable(),
+  }),
+  z.object({
+    type: z.literal('textarea'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    placeholder: z.string(),
+    id: z.number().nullable(),
+  }),
+  z.object({
+    type: z.literal('boolean'),
+    label: z.string('Label is required!'),
+    name: z.string(),
+    required: z.boolean(),
+    description: z.string(),
+    checked: z.boolean(),
+    id: z.number().nullable(),
+  }),
+]);

@@ -2,7 +2,7 @@ import { Form } from '../types/Form';
 
 export const mockForms: Form[] = [
   {
-    id: 'form_01',
+    id: 'form_1',
     userId: 'user_01',
 
     name: 'Post-training check-in',
@@ -14,7 +14,7 @@ export const mockForms: Form[] = [
 
     fields: [
       {
-        id: 'field_01',
+        id: 1,
         type: 'text',
         name: 'athleteName',
         label: 'Athlete name',
@@ -23,7 +23,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_02',
+        id: 2,
         type: 'select',
         name: 'sessionType',
         label: 'Session type',
@@ -38,18 +38,19 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_03',
+        id: 3,
         type: 'number',
         name: 'duration',
         label: 'Duration',
         required: true,
+        placeholder: 'Enter duration',
         min: 1,
         max: 300,
         unit: 'min',
       },
 
       {
-        id: 'field_04',
+        id: 4,
         type: 'scale',
         name: 'intensity',
         label: 'Session intensity',
@@ -59,7 +60,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_05',
+        id: 5,
         type: 'scale',
         name: 'fingerPain',
         label: 'Finger pain',
@@ -69,7 +70,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_06',
+        id: 6,
         type: 'textarea',
         name: 'notes',
         label: 'Notes',
@@ -95,7 +96,7 @@ export const mockForms: Form[] = [
 
     fields: [
       {
-        id: 'field_07',
+        id: 1,
         type: 'text',
         name: 'athleteName',
         label: 'Athlete name',
@@ -104,7 +105,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_08',
+        id: 2,
         type: 'scale',
         name: 'sleepQuality',
         label: 'Sleep quality',
@@ -114,7 +115,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_09',
+        id: 3,
         type: 'scale',
         name: 'soreness',
         label: 'Muscle soreness',
@@ -124,7 +125,7 @@ export const mockForms: Form[] = [
       },
 
       {
-        id: 'field_10',
+        id: 4,
         type: 'scale',
         name: 'energy',
         label: 'Energy level',
