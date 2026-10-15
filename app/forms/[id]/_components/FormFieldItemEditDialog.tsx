@@ -49,8 +49,6 @@ export const FormFieldItemEditDialog = ({
 
   const isEdit = defaultValues.id !== null;
 
-  console.log(editFieldConfig);
-
   return (
     <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <FormProvider {...methods}>
