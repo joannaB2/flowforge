@@ -1,7 +1,7 @@
 'use client';
 
 import { ConfirmDialog } from '@/common/_components/ConfirmDialog';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Form } from '@/types/Form';
 import { Eye } from 'lucide-react';
@@ -27,10 +27,13 @@ export const FormList = ({ formList }: { formList: Form[] }) => {
               </Button>
             </div>
             <div className="flex w-full justify-between">
-              <Button
-                nativeButton={false}
-                render={<Link href={`/forms/${form.id}`}>Edit form</Link>}
-              />
+              <Link
+                href={`/forms/${form.id}`}
+                className={buttonVariants({ variant: 'secondary', size: 'lg' })}
+              >
+                Edit form
+              </Link>
+
               <ConfirmDialog
                 title="Delete Form"
                 message={`Are you sure you want to delete the form "${form.name}"? This action cannot be undone.`}

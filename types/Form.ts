@@ -59,7 +59,7 @@ export type FormField =
 export type FormStatus = 'draft' | 'published';
 
 export interface Form {
-  id: string;
+  id: string | null;
   userId: string;
   name: string;
   description: string;
