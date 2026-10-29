@@ -23,7 +23,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
 import { FormFieldSelectComponent } from './FormFieldSelectComponent';
 import { FormFieldSelectOptions } from './FormFieldSelectOptions';
-import { FormFieldConfig } from '@/lib/fieldsCofig';
+import { FormFieldConfig } from '@/utils/fieldsCofig';
 
 interface FormFieldProps {
   fieldNode: FormFieldConfig;
@@ -96,13 +96,13 @@ export const FormFieldComponent = ({ fieldNode }: FormFieldProps) => {
             fieldNode={fieldNode}
             value={form.getValues(field.name)}
             onSelect={(value: string | null) => {
-              form.setValue(field.name, value)
+              form.setValue(field.name, value);
               if (
                 field.name === 'type' &&
                 value === 'select' &&
                 !form.getValues('options')
               ) {
-                form.setValue('options', [])
+                form.setValue('options', []);
               }
             }}
           />
