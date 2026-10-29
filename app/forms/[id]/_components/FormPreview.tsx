@@ -13,12 +13,12 @@ import {
   ItemDescription,
   ItemTitle,
 } from '@/components/ui/item';
-import { formSchema } from '@/lib/schemas';
+import { formSchema } from '@/utils/schemas';
 import { Input } from '@/components/ui/input';
 import { Field, FieldLabel } from '@/components/ui/field';
 import { Button, buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
-import { slugify } from '@/lib/slugify';
+import { slugify } from '@/utils/slugify';
 
 function SortableField({
   idForSortable,

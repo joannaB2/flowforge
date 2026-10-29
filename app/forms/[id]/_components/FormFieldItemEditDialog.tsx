@@ -17,8 +17,8 @@ import { FormProvider, useForm, useWatch } from 'react-hook-form';
 import * as z from 'zod';
 import { FormFieldComponent } from './FormFieldComponent';
 import { useState } from 'react';
-import { allowedFields, commonFields } from '@/lib/fieldsCofig';
-import { formSchema } from '@/lib/schemas';
+import { allowedFields, commonFields } from '@/utils/fieldsCofig';
+import { formSchema } from '@/utils/schemas';
 
 interface FormFieldItemEditProps {
   defaultValues: FormField;
